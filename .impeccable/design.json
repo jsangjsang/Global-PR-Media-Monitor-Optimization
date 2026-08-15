@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-15T00:00:00+08:00",
+  "title": "Design System: Coverage Intelligence",
+  "extensions": {
+    "colorMeta": {
+      "deep-ink": { "role": "neutral", "displayName": "Deep Ink", "tonalRamp": ["oklch(15% 0.035 257)", "oklch(25% 0.035 257)", "oklch(36% 0.032 257)", "oklch(48% 0.028 257)", "oklch(60% 0.023 257)", "oklch(72% 0.018 257)", "oklch(84% 0.012 257)", "oklch(95% 0.006 257)"] },
+      "electric-blue": { "role": "primary", "displayName": "Electric Blue", "tonalRamp": ["oklch(15% 0.11 265)", "oklch(25% 0.16 265)", "oklch(36% 0.21 265)", "oklch(48% 0.24 265)", "oklch(60% 0.22 265)", "oklch(72% 0.17 265)", "oklch(84% 0.10 265)", "oklch(95% 0.035 265)"] },
+      "acid-lime": { "role": "secondary", "displayName": "Acid Lime", "tonalRamp": ["oklch(15% 0.055 118)", "oklch(25% 0.085 118)", "oklch(36% 0.12 118)", "oklch(48% 0.15 118)", "oklch(60% 0.17 118)", "oklch(72% 0.17 118)", "oklch(84% 0.15 118)", "oklch(95% 0.055 118)"] },
+      "exception-coral": { "role": "tertiary", "displayName": "Exception Coral", "tonalRamp": ["oklch(15% 0.07 30)", "oklch(25% 0.11 30)", "oklch(36% 0.15 30)", "oklch(48% 0.19 30)", "oklch(60% 0.19 30)", "oklch(72% 0.15 30)", "oklch(84% 0.09 30)", "oklch(95% 0.03 30)"] },
+      "cold-daylight": { "role": "neutral", "displayName": "Cold Daylight", "tonalRamp": ["oklch(15% 0.01 245)", "oklch(25% 0.012 245)", "oklch(36% 0.013 245)", "oklch(48% 0.014 245)", "oklch(60% 0.014 245)", "oklch(72% 0.013 245)", "oklch(84% 0.011 245)", "oklch(95% 0.008 245)"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "tonalRamp": ["oklch(15% 0 0)", "oklch(25% 0 0)", "oklch(36% 0 0)", "oklch(48% 0 0)", "oklch(60% 0 0)", "oklch(72% 0 0)", "oklch(84% 0 0)", "oklch(100% 0 0)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Operational Display", "purpose": "Page leads, large metrics, and the monthly document title." },
+      "headline": { "displayName": "Section Headline", "purpose": "Major section and feature titles." },
+      "title": { "displayName": "Panel Title", "purpose": "Local hierarchy inside work surfaces." },
+      "body": { "displayName": "Evidence Body", "purpose": "Explanations, evidence excerpts, and document prose." },
+      "label": { "displayName": "Coordinate Label", "purpose": "Statuses, table headers, and operational coordinates." }
+    },
+    "shadows": [
+      { "name": "hero-ambient", "value": "0 8px 30px rgba(25, 42, 66, 0.06)", "purpose": "Separates the weekly run hero from the cold daylight canvas." },
+      { "name": "action-lift", "value": "0 9px 20px rgba(40, 84, 245, 0.22)", "purpose": "Signals the primary operational action." },
+      { "name": "overlay-ambient", "value": "0 18px 48px rgba(25, 42, 66, 0.14)", "purpose": "Dialogs and toasts only." },
+      { "name": "drawer-edge", "value": "-20px 0 55px rgba(10, 20, 36, 0.21)", "purpose": "Separates the record inspection drawer from the underlying ledger." },
+      { "name": "document-float", "value": "0 14px 45px rgba(27, 43, 66, 0.09)", "purpose": "Lifts the monthly brief as a paper document." }
+    ],
+    "motion": [
+      { "name": "control-state", "value": "160ms ease-out", "purpose": "Button movement, shadow, and color response." },
+      { "name": "drawer-entry", "value": "220ms cubic-bezier(0.2, 0.8, 0.2, 1)", "purpose": "Slides the evidence drawer in from the right." },
+      { "name": "modal-entry", "value": "180ms ease-out", "purpose": "Raises dialogs and toasts into view." },
+      { "name": "progress-state", "value": "400ms ease-out", "purpose": "Advances the import progress indicator." }
+    ],
+    "breakpoints": [
+      { "name": "workbench", "value": "1120px" },
+      { "name": "navigation-band", "value": "880px" },
+      { "name": "compact", "value": "650px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Commits the next operational step.",
+      "html": "<button class=\"ds-btn-primary\">REVIEW EXCEPTIONS</button>",
+      "css": ".ds-btn-primary { min-height: 42px; padding: 0 17px; border: 1px solid var(--blue); border-radius: 9px; background: var(--blue); color: white; font: 750 12px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; box-shadow: 0 9px 20px rgba(40,84,245,.22); transition: transform 160ms ease-out, box-shadow 160ms ease-out, background 160ms ease-out; } .ds-btn-primary:hover { background: var(--blue-deep); transform: translateY(-1px); box-shadow: 0 12px 24px rgba(40,84,245,.29); } .ds-btn-primary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Holds or previews a secondary action without competing with the commitment action.",
+      "html": "<button class=\"ds-btn-secondary\">HOLD RECORD</button>",
+      "css": ".ds-btn-secondary { min-height: 42px; padding: 0 17px; border: 1px solid var(--line-strong); border-radius: 9px; background: white; color: var(--ink); font: 750 12px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; transition: border-color 160ms ease-out, color 160ms ease-out; } .ds-btn-secondary:hover { border-color: var(--blue); color: var(--blue); } .ds-btn-secondary:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }"
+    },
+    {
+      "name": "Decision Field",
+      "kind": "input",
+      "refersTo": "field",
+      "description": "A compact, legible classifier field inside the review workbench.",
+      "html": "<label class=\"ds-field\"><span>PRODUCT</span><select><option>GO Ultra</option></select></label>",
+      "css": ".ds-field { display: block; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: white; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-field > span { display: block; margin-bottom: 8px; font-size: 10px; font-weight: 800; letter-spacing: .05em; } .ds-field select { width: 100%; min-height: 40px; padding: 0 11px; border: 1px solid var(--line-strong); border-radius: 8px; background: white; color: var(--ink); } .ds-field select:focus-visible { outline: 3px solid var(--blue); outline-offset: 2px; }"
+    },
+    {
+      "name": "Status Chip",
+      "kind": "chip",
+      "refersTo": "status-ready",
+      "description": "Pairs a short text state with operational color.",
+      "html": "<span class=\"ds-status-ready\">READY</span>",
+      "css": ".ds-status-ready { min-width: 52px; padding: 5px 7px; display: inline-flex; align-items: center; justify-content: center; border-radius: 6px; background: var(--lime-soft); color: #567415; font: 800 9px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; letter-spacing: .05em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Active Navigation Item",
+      "kind": "nav",
+      "description": "Marks the active operational workspace in the deep-ink rail.",
+      "html": "<button class=\"ds-nav-active\"><span>RQ</span><strong>Review queue</strong><b>16</b></button>",
+      "css": ".ds-nav-active { min-height: 43px; padding: 0 10px; display: grid; grid-template-columns: 28px 1fr auto; align-items: center; gap: 8px; border: 0; border-radius: 8px; background: var(--blue); color: white; text-align: left; font: 13px/1.5 -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; box-shadow: 0 8px 18px rgba(40,84,245,.25); } .ds-nav-active > span { color: #dbe2ff; font-size: 9px; font-weight: 800; letter-spacing: .08em; } .ds-nav-active b { min-width: 21px; height: 21px; display: grid; place-items: center; border-radius: 6px; background: var(--coral); font-size: 10px; } .ds-nav-active:hover { background: var(--blue-deep); } .ds-nav-active:focus-visible { outline: 3px solid var(--lime); outline-offset: 2px; }"
+    },
+    {
+      "name": "Evidence Panel",
+      "kind": "card",
+      "refersTo": "panel",
+      "description": "A paper work surface organized by hairlines instead of heavy elevation.",
+      "html": "<section class=\"ds-panel\"><span>EVIDENCE 01</span><h3>Coverage decision</h3><p>Exact product match and journalist ownership rule apply.</p></section>",
+      "css": ".ds-panel { padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: white; color: var(--ink); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; } .ds-panel > span { color: var(--blue); font-size: 9px; font-weight: 800; letter-spacing: .09em; } .ds-panel h3 { margin: 10px 0 6px; font-size: 18px; letter-spacing: -.028em; } .ds-panel p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }"
+    },
+    {
+      "name": "Reconciliation Stage",
+      "kind": "custom",
+      "description": "The signature evidence-state block used by the source-to-ready rail.",
+      "html": "<div class=\"ds-rail-stage\"><strong>212</strong><span>LARK-READY</span></div>",
+      "css": ".ds-rail-stage { min-height: 92px; padding: 16px 15px; border: 1px solid #bfda7a; border-radius: 11px; background: var(--lime-soft); color: var(--ink); display: flex; flex-direction: column; justify-content: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; position: relative; } .ds-rail-stage::before { content: ''; width: 8px; height: 8px; position: absolute; top: -5px; left: calc(50% - 4px); border: 2px solid white; border-radius: 50%; background: #709520; box-shadow: 0 0 0 1px var(--line-strong); } .ds-rail-stage strong { font-size: 28px; font-weight: 820; line-height: 1; letter-spacing: -.04em; font-variant-numeric: tabular-nums; } .ds-rail-stage span { margin-top: 8px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .06em; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Newsroom Evidence Ledger",
+    "overview": "Coverage Intelligence feels like an editorial operations desk: cold daylight surfaces hold dense records, deep ink anchors navigation, and hairline rules make evidence easy to scan. The experience is precise and operational rather than promotional, with every surface helping PR teams move from import to exception review, intelligence, and implementation handoff. The world is mostly flat and paper-like. Electric blue marks decisive action and active state; acid lime signals reconciled or ready evidence; exception coral interrupts the ledger only when human judgment is required. It rejects a generic grid of interchangeable dashboard cards in favor of rails, ledgers, workbenches, and briefing documents.",
+    "keyCharacteristics": [
+      "Cold daylight canvas with white paper work surfaces and deep-ink anchors.",
+      "Dense, hairline-divided evidence ledgers with tabular numbers and compact labels.",
+      "Electric blue for agency, acid lime for completion, and coral for exceptions.",
+      "A reconciliation rail in the first viewport that makes import state legible at a glance.",
+      "Responsive layouts that preserve the record-first story before collapsing to one column."
+    ],
+    "rules": [
+      { "name": "The Operational Color Rule", "body": "Blue means act, lime means reconciled, and coral means review; never use these accents as arbitrary decoration.", "section": "colors" },
+      { "name": "The Paper Majority Rule", "body": "Cold daylight, paper, and ink occupy most of every screen so evidence remains the visual priority.", "section": "colors" },
+      { "name": "The Coordinate Label Rule", "body": "Uppercase microtype identifies operational position or state; it does not introduce every block.", "section": "typography" },
+      { "name": "The Numeric Evidence Rule", "body": "Counts, reach, confidence, and metrics use tabular figures and tighter display tracking.", "section": "typography" },
+      { "name": "The Flat Ledger Rule", "body": "Evidence surfaces stay border-defined at rest; elevation is reserved for hierarchy, overlays, and direct interaction.", "section": "elevation" },
+      { "name": "The Bounded Curvature Rule", "body": "Corners communicate scale: compact for notation, control-sized for actions, and panel-sized for work surfaces; avoid indiscriminate pill shapes.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do preserve the record-first sequence: import, reconcile, review exceptions, interpret, then hand off.",
+      "Do use hairlines and tonal shifts to organize dense evidence before adding a new container.",
+      "Do keep primary actions blue, reconciled states lime, and review states coral, always paired with a text label.",
+      "Do maintain 40–43px minimum interactive heights and the visible 3px focus treatment.",
+      "Do let large metrics and counts use tabular numerals and tight tracking."
+    ],
+    "donts": [
+      "Don't turn the workspace into a generic mosaic of equal-weight metric cards.",
+      "Don't use accent colors as decoration or communicate status through color alone.",
+      "Don't make every caption an uppercase eyebrow; coordinate labels should earn their place.",
+      "Don't add heavy shadows to ordinary evidence panels or table rows.",
+      "Don't imply that synthetic demo data, external integrations, or temporary edits are production-connected."
+    ]
+  }
+}
